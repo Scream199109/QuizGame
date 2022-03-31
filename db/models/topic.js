@@ -14,8 +14,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   topic.init({
-    topicName: DataTypes.TEXT,
-    allowNull: false,
+    topicName: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
   }, {
     sequelize,
     modelName: 'topic',
