@@ -1,10 +1,13 @@
 const router = require('express').Router();
+
+const sessionCheck = require('../middlewares/sessionCheck');
+
 const { topic, card } = require('../db/models');
 // let id2 = 0;
 
 router.route('/')
   .get((req, res) => {
-    res.render('main');
+    res.render('main', { name: req.session.user });
   });
 router.get('/slider', async (req, res) => {
   const topicsObj = await topic.findAll({ raw: true });
@@ -23,6 +26,5 @@ router.get('/:id', async (req, res) => {
   console.log(cardObj)
   // res.send(cardObj);
   res.render('card', { cardObj });
-});
 
 module.exports = router;

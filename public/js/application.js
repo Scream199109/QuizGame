@@ -75,5 +75,5 @@ next?.addEventListener('click', () => {
     `
     },5000);
   }
-
+  }
 });
