@@ -16,6 +16,13 @@ app.use('/reg', registrationRoute);
 app.use('/login', loginRoute);
 app.use('/logout', logoutRoute);
 
+app.get('/slider', (req, res) => {
+  res.render('slider')
+})
+app.get('/card', (req, res) => {
+  res.render('card')
+})
+
 app.listen(port, () => {
   console.log(`Server started at ${port} port`);
 });

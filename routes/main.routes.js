@@ -5,4 +5,10 @@ router.get('/', (req, res) => {
   res.render('main', { name: req.session.user });
 });
 
+
+// router.route('/example')
+//   .get((req, res) => {
+//     res.render('example');
+//   });
+
 module.exports = router;
