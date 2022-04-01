@@ -1,19 +1,11 @@
-<div class="card">
+{{!-- <div id="testB">{{cardObj}}</div> --}}
+<div class="container-md">
+<div id="testB" style="display: none;">
+{{#each cardObj}}
+  {{this.question}},{{this.answer}}
+{{/each}}
+</div>
+<div class="cardContainer"></div>
+<div class="outputAnswer"></div>
 
-  <div class="card__topic">
-    <h2>Topic-1</h2>
-  </div>
-  <div class="card__subtitle">
-    <p>Example text</p>
-  </div>
-  <div class="card__question">
-    <p>Как зовут сына мамкиной подруги?</p>
-  </div>
-  <div class="card__input">
-    <input type="text" class="inp-card">
-  </div>
-  <div class="card__btn">
-    <button class="card-btn"> <span> GAME ON
-      </span></button>
-  </div>
 </div>

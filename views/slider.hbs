@@ -24,54 +24,31 @@
       <div class="slide active">
         <div class="slide-content ">
           <div class="clip-svg">
-            <img class="" src="../images/DFDFDF.jpg.740x555_q85_box-0,0,740,555_crop_detail_upscale.jpg" alt="" />
+            <img class="" src= "../images/Butkemp-Fullstack-razrabotchik-JavaScript.webp" alt="" />
             <div class="title-wrapper">
-              <div class="title-1">Topic-1</div>
-              <div class="title-2">текст</div>
+              <div class="title-1">Добро пожаловать в игру!</div>
             </div>
           </div>
         </div>
       </div>
-      <!-- еще слайды -->
+  {{#each topicsObj}}
       <div class="slide">
-        <div class="slide-content ">
-          <div class="clip-svg">
-            <img class="" src="../images/Butkemp-Fullstack-razrabotchik-JavaScript.webp" alt="" />
-            <div class="title-wrapper">
-              <div class="title-1">Topic-2</div>
-              <div class="title-2">текст</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="slide">
-        <div class="slide-content ">
+        <div class="slide-content" id="{{this.id}}">
           <div class="clip-svg">
             <img class="" src="../images/tatu-3d-10.jpg" alt="" />
             <div class="title-wrapper">
-              <div class="title-1">Topic-3</div>
-              <div class="title-2">текст</div>
+              <div class="title-1" >{{this.topicName}}</div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="slide">
-        <div class="slide-content ">
-          <div class="clip-svg">
-            <img class="" src="../images/Butkemp-Fullstack-razrabotchik-JavaScript.webp" alt="" />
-            <div class="title-wrapper">
-              <div class="title-1">Topic-4</div>
-              <div class="title-2">текст</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="footer-wrapper">
-    <ul>
-      <li><a href="#link">ссылка</a></li>
-      <li><a href="#link">ссылка</a></li>
+        <div class="footer-wrapper">
+    <ul id="liList">
+      <li><a href="{{this.id}}">Play</a></li>
     </ul>
   </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+
 </div>
