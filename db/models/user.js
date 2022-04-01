@@ -24,6 +24,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     userPass: {
       type: DataTypes.STRING,
+
       allowNull: false,
     },
   }, {
