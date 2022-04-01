@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Компания</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <form class="d-flex">
+          {{#if name}}
+          <a href="/add" class="btn btn-outline-dark">Играть</a>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/profile">Статистика</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Выйти</a>
+          </li>
+          {{else}}
+          <li class="nav-item">
+            <a id="regButton" class="nav-link" href="/reg">Регистрация {{name}}</a>
+          </li>
+          <li class="nav-item">
+            <a id="profileButton" class="nav-link" href="/login">Логин</a>
+          </li>
+          {{/if}}
+
+        </form>
+
+        <script src="../routes/main.route.js"> </script>
+      </ul>
+    </div>
+  </div>
+</nav>
