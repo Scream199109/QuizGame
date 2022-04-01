@@ -8,8 +8,13 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       userName: {
-        type: Sequelize.TEXT,
-        allowNull: false,
+        type: Sequelize.STRING,
+      },
+      userEmail: {
+        type: Sequelize.STRING,
+      },
+      userPass: {
+        type: Sequelize.STRING,
       },
       createdAt: {
         allowNull: false,

@@ -18,6 +18,10 @@ module.exports = {
       id_topic: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        references: {
+          model: 'topics',
+          key: 'id',
+        },
       },
       cardCoin: {
         type: Sequelize.INTEGER,
