@@ -12,6 +12,13 @@ config(app);
 app.use('/', mainRoute);
 // app.use('/reg', registrationRoute);
 
+app.get('/slider', (req, res) => {
+  res.render('slider')
+})
+app.get('/card', (req, res) => {
+  res.render('card')
+})
+
 app.listen(port, () => {
   console.log(`Server started at ${port} port`);
 });
