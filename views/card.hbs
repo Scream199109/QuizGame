@@ -1,0 +1,11 @@
+{{!-- <div id="testB">{{cardObj}}</div> --}}
+<div class="container-md">
+<div id="testB" style="display: none;">
+{{#each cardObj}}
+  {{this.question}},{{this.answer}}
+{{/each}}
+</div>
+<div class="cardContainer"></div>
+<div class="outputAnswer"></div>
+
+</div>

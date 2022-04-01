@@ -1,0 +1,109 @@
+{{!-- {{!--
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rotating Slider jQuery Plugin</title>
+  <link rel="stylesheet" href="rotating-slider.min.css"> --}}
+  <style>
+    /* Demo Styles */
+    @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:300,700);
+
+    body {
+      background: #333;
+      font-family: 'Roboto Slab', sans-serif;
+      font-weight: 300;
+      overflow: hidden;
+    }
+
+    .rotating-slider ul.slides li {
+      color: #fff
+    }
+
+    .rotating-slider ul.slides li:nth-of-type(1) {
+      background: #3498db;
+    }
+
+    .rotating-slider ul.slides li:nth-of-type(2) {
+      background: url('http://static.pexels.com/wp-content/uploads/2014/05/car-oldtimer-snow-342-825x550.jpg');
+    }
+
+    .rotating-slider ul.slides li:nth-of-type(3) {
+      background: #e74c3c;
+    }
+
+    .rotating-slider ul.slides li:nth-of-type(4) {
+      background: url('http://static.pexels.com/wp-content/uploads/2014/06/analog-camera-old-olympus-om-10-1528-825x550.jpg');
+    }
+
+    .rotating-slider ul.slides li:nth-of-type(5) {
+      background: #f1c40f;
+    }
+
+    .rotating-slider ul.slides li:nth-of-type(6) {
+      background: url(http://static.pexels.com/wp-content/uploads/2014/06/bridge-city-night-645-827x550.jpg);
+    }
+
+    .rotating-slider ul.slides li .inner {
+      box-sizing: border-box;
+      padding: 2em;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+
+
+
+  <div class="rotating-slider">
+    <ul class="slides">
+      <li>
+        <div class="inner">
+          <h2>Actual Rotating Slider</h2>
+          <p>Built with math and dedication</p>
+        </div>
+      </li>
+      <li>
+        <div class="inner"></div>
+      </li>
+      <li>
+        <div class="inner">
+          <h2>Hates IE</h2>
+          <p>Uses clip-path to shape slides</p>
+        </div>
+      </li>
+      <li>
+        <div class="inner">
+        </div>
+      </li>
+      {{!-- <li>
+        <div class="inner">
+          <h2>Easy to use</h2>
+          <p>Just add list elements in the HTML and set a height and width in the JavaScript Settings</p>
+          <p><small>Now touch &amp; drag friendly!</small></p>
+        </div>
+      </li>
+      <li>
+        <div class="inner">
+          <h2>I'm not a thief!</h2>
+          <p>Stock photos from www.pexels.com</p>
+        </div>
+      </li> --}}
+    </ul>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="jquery.rotating-slider.min.js"></script>
+  <script>
+    $(function () {
+      $('.rotating-slider').rotatingSlider({
+        slideHeight: Math.min(200, window.innerWidth),
+        slideWidth: Math.min(250, window.innerWidth),
+        afterRotationStart: function () {
+          console.log('Rotating to slide ' + ($('.rotating-slider .active-slide').index() + 1));
+        }
+      });
+    });
+  </script> --}}
+
+
