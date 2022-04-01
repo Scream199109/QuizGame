@@ -1,14 +1,10 @@
 const router = require('express').Router();
+const sessionCheck = require('../middlewares/sessionCheck');
 
-// router.route('/')
-//   .get((req, res) => {
-//     res.render('main');
-//   });
+router.get('/', (req, res) => {
+  res.render('main', { name: req.session.user });
+});
 
-router.route('/')
-  .get((req, res) => {
-    res.render('main');
-  });
 
 // router.route('/example')
 //   .get((req, res) => {
